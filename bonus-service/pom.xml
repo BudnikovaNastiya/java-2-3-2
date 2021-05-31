@@ -8,21 +8,43 @@
     <artifactId>bonus-calculator</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <repositories>
+        <repository>
+            <id>gradle.plugin.com.github.spotbugs.snom</id>
+            <url>https://mvnrepository.com/artifact/com.github.spotbugs/spotbugs</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.4.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <build>
         <plugins>
             <plugin>
-                <groupId>com.github.spotbugs</groupId>
-                <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>3.1.12.2</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+            </plugin>
+            <plugin>
+                <dependency>
+                    <groupId>gradle.plugin.com.github.spotbugs.snom</groupId>
+                    <artifactId>spotbugs-gradle-plugin</artifactId>
+                    <version>4.7.1</version>
+                </dependency>
             </plugin>
         </plugins>
+
+
     </build>
 </project>
-
-
