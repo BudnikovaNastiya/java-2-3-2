@@ -5,20 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.netology</groupId>
-    <artifactId>bonus-calculator</artifactId>
+    <artifactId>bonus-service</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <repositories>
-        <repository>
-            <id>gradle.plugin.com.github.spotbugs.snom</id>
-            <url>https://mvnrepository.com/artifact/com.github.spotbugs/spotbugs</url>
-        </repository>
-    </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
+            <artifactId>junit-jupiter</artifactId>
             <version>5.4.2</version>
             <scope>test</scope>
         </dependency>
@@ -32,19 +25,10 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-            </plugin>
-            <plugin>
-                <dependency>
-                    <groupId>gradle.plugin.com.github.spotbugs.snom</groupId>
-                    <artifactId>spotbugs-gradle-plugin</artifactId>
-                    <version>4.7.1</version>
-                </dependency>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>3.1.12.2</version>
             </plugin>
         </plugins>
-
-
     </build>
 </project>
